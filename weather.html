@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title>Weather_app</title>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-theme">
+            <button id="themetoggle" title="Toggle Theme">Toggle Theme</button>
+        </div>
+        <br>
+        <h1>Weather App</h1>
+        <div class="input-sec">
+            <input type="text" id="cityInput" title="cityInput" placeholder="Enter your city name">
+            <button onclick="getWeather()">Get Weather</button>
+            <button onclick="getLocationWeather()">Use my location</button>
+        </div>
+        <div class="weather-info" id="weatherResult"></div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
