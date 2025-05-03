@@ -18,7 +18,6 @@ async function getLocationWeather() {
         }, (error) => {
             console.error(error);
             alert('Unable to fetch location.');
-            alert(error);
         });
     } else {
         alert('Geolocation not supported by your browser.');
