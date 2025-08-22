@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import dotenv from "dotenv";
+=======
+const api_key= "api_key";
+>>>>>>> b1768636e41a52b7b8c7458d076565f0d3880c79
 
 async function getWeather() {
     const city= document.getElementById("cityInput").value;
@@ -20,7 +24,6 @@ async function getLocationWeather() {
         }, (error) => {
             console.error(error);
             alert('Unable to fetch location.');
-            alert(error);
         });
     } else {
         alert('Geolocation not supported by your browser.');
