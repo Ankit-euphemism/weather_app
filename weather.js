@@ -1,4 +1,4 @@
-const api_key= "9c95ad952fab0bf8662d72e6cf4982bd";
+import dotenv from "dotenv";
 
 async function getWeather() {
     const city= document.getElementById("cityInput").value;
@@ -7,14 +7,16 @@ async function getWeather() {
         alert("Please Enter a city map");
         return;
     }
-    await fetchWeather(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric`);
+    
+    dotenv.config();
+    await fetchWeather(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.api_key}&units=metric`);
 }
 
 async function getLocationWeather() {
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(async (position)=>{
             const {latitude, longitude}= position.coords;
-            await fetchWeather(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`);
+            await fetchWeather(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.api_Key}&units=metric`);
         }, (error) => {
             console.error(error);
             alert('Unable to fetch location.');
