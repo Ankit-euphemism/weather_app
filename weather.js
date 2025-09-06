@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import dotenv from "dotenv";
-=======
-const api_key= "api_key";
->>>>>>> b1768636e41a52b7b8c7458d076565f0d3880c79
+const dotenv= require("dotenv");
 
 async function getWeather() {
     const city= document.getElementById("cityInput").value;
@@ -11,7 +7,6 @@ async function getWeather() {
         alert("Please Enter a city map");
         return;
     }
-    
     dotenv.config();
     await fetchWeather(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.api_key}&units=metric`);
 }
