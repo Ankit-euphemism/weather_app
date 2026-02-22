@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px 16px;
+  background: linear-gradient(120deg, #6dd5fa, #2980b9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+.app-shell.dark {
+  background: linear-gradient(to right, #232526, #414345);
+  color: white;
+}
+
+.container {
+  background: white;
+  padding: 28px 32px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: min(100%, 460px);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.app-shell.dark .container {
+  background: #333;
+  color: white;
+}
+
+.input-sec {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+input {
+  width: min(100%, 320px);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.weather-info {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.weather-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.weather-info img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-info.error p {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.app-shell.dark .weather-info.error p {
+  color: #ff6b6b;
+}
+
+.toggle-theme {
+  text-align: right;
+}
+
+#themeToggle {
+  background-color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+#themeToggle:hover {
+  background-color: #27ae60;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 16px 12px;
+    align-items: stretch;
+  }
+
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  input,
+  button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
