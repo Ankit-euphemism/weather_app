@@ -108,7 +108,6 @@ const App = () => {
         {!loading && <WeatherCard data={weatherData} />}
 
         {/* Footer */}
-        <div className="app-footer">Powered by OpenWeatherMap</div>
       </div>
     </div>
   );
