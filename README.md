@@ -154,7 +154,3 @@ Configures a shared **Axios instance** with the base URL and API key pre-set. Ex
 - [`eslint-plugin-react-refresh`](https://github.com/ArnaudBarre/eslint-plugin-react-refresh) `^0.4.24`
 
 ---
-
-## 📄 License
-
-MIT © 2025
